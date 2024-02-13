@@ -18,6 +18,7 @@ const coords = document.querySelector("#coords")
 const handleOrientation = e => {
   const compass = e.webkitCompassHeading || Math.abs(e.alpha - 360);
   arrow.style.transform = `rotate(${compass}deg)`
+  speed.textContent = compass
 }
 
 window.addEventListener("deviceorientation", handleOrientation)
